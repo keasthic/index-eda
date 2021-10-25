@@ -97,6 +97,26 @@ button {
 }
 .slider {
   margin-top: 20px;
+  position: relative;
+}
+.slider-button {
+  cursor: pointer;
+}
+.slider-buttons {
+  position: absolute;
+  right: 46px;
+  bottom: 40px;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .slide {
   position: relative;
@@ -134,6 +154,16 @@ button {
 }
 .slide-summer {
   background: url("../img/summer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-autumn {
+  background: url("../img/autumn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide-vitamines {
+  background: url("../img/vitamines.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -201,17 +231,9 @@ button {
   border-radius: 20px;
   overflow: hidden;
   max-width: 570px;
-  min-height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
 }
 .card-footer {
@@ -439,9 +461,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 50px;
 }
 .features-card {
@@ -454,6 +473,7 @@ button {
           box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
   border-radius: 18px;
   text-align: center;
+  margin-right: 37px;
 }
 .features-title {
   font-weight: 500;
@@ -501,4 +521,116 @@ button {
 }
 .social-link {
   text-decoration: none;
+}
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .tabs-card {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: calc(45%);
+    margin-top: 15px;
+  }
+  .promo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+  .features-header {
+    text-align: center;
+  }
+  .features-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: -25px;
+  }
+  .features-card {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: calc(40%);
+    margin-top: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    max-width: calc(40%);
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .search {
+    width: 100%;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .promo {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .category {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .delivery-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .tabs-card {
+    width: 100%;
+  }
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .social-link {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    min-width: 100%;
+  }
+  .features-card {
+    min-width: 100%;
+  }
 }

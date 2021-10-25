@@ -82,6 +82,20 @@ button{
 }
 .slider{
 	margin-top: 20px;
+ position: relative;
+ &-button{
+ cursor: pointer;
+ }
+ &-buttons{
+ position: absolute;
+ right: 46px;
+ bottom: 40px;
+ z-index: 9;
+ display: flex;
+ align-items: center;
+ width: 100px;
+ justify-content: space-between;
+ }
 }
 .slide{
  position: relative;
@@ -114,6 +128,16 @@ button{
  }
  &-summer{
  background: url("../img/summer.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+ &-autumn{
+ background: url("../img/autumn.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+ &-vitamines{
+ background: url("../img/vitamines.png");
  background-repeat: no-repeat;
  background-size: cover;
  }
@@ -177,10 +201,7 @@ button{
  border-radius: 20px;
  overflow: hidden;
  max-width: 570px;
- min-height: 380px;
  display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	width: 100%;
 	&-footer{
 	margin-top: 70px;
@@ -392,7 +413,6 @@ button{
  }
  &-cards{
  display: flex;
- justify-content: space-between;
  margin-top: 50px;
  }
  &-card{
@@ -403,6 +423,7 @@ button{
  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
  border-radius: 18px;
  text-align: center;
+ margin-right: 37px;
  }
  &-title{
  font-weight: 500;
@@ -445,5 +466,103 @@ button{
  margin-left: auto;
  &-link{
  text-decoration: none;
+ }
+}
+@media (max-width: 1260px) {
+ .container{
+  max-width: 960px;
+ }
+ .search{
+ margin-left: 40px;
+ margin-right: 40px;
+ }
+ .tabs-content{
+  flex-wrap: wrap;
+ }
+ .tabs-card{
+ flex: 50%;
+ max-width: calc(50% - 5px);
+ margin-top: 15px;
+ }
+ .promo{
+ flex-wrap: wrap;
+ }
+ .card{
+ min-width: 100%;
+ margin-top: 20px;
+ }
+ .features{
+  &-header{
+   text-align: center;
+  }
+  &-cards{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -25px;
+  }
+  &-card{
+  flex: 50%;
+  max-width: calc(50%-10px);
+  margin-top: 50px;
+  }
+ }
+}
+@media (max-width: 992px) {
+ .container{
+  max-width: 750px;
+ }
+ .slide{
+  padding: 70px;
+ }
+ .delivery-card{
+  max-width: calc(50% - 10px);
+ }
+ .footer-logo{
+  margin-right: 40px;
+ }
+}
+@media (max-width: 768px) {
+ .container{
+  max-width: 560px;
+ }
+ .header{
+  flex-wrap: wrap;
+ }
+ .search{
+  width: 100%;
+  order: 5;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+ }
+ .promo{
+  flex-wrap: wrap;
+ }
+ .category{
+  flex-wrap: wrap;
+ }
+ .delivery-cards{
+  flex-wrap: wrap;
+ }
+ .tabs-card{
+  width: 100%;
+ }
+ .social{
+ display: flex;
+ &-link{
+ margin-right: 5px;
+ }
+ }
+}
+@media (max-width: 576px) {
+ .container {
+  max-width: 90%;
+ }
+ .tabs-card{
+  min-width: 100%;
+ }
+ .features-card{
+  min-width: 100%;
  }
 }
